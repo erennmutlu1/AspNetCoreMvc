@@ -1,0 +1,54 @@
+﻿@*@model List<AspNetCoreMvc.Models.Product>
+
+
+
+    <ul>
+         @foreach (var product in Model)
+         {
+             <li>@product.ProductName</li>
+         }
+    </ul>*@
+
+<h3>All Product Details</h3>
+
+<h3>ViewBag</h3>
+<ul>
+    @foreach (var product in ViewBag.products as List<AspNetCoreMvc.Models.Product>)
+    {
+        <li><b>Name:@product.ProductName</b></li>
+        <li>Id:@product.Id</li>
+        <li>Quantity:@product.Quantity</li>
+        <br>
+    }
+</ul>
+
+
+
+<h3>ViewData</h3>
+<ul>
+    @foreach (var product in ViewData["products"] as List<AspNetCoreMvc.Models.Product>)
+    {
+        <li><b>Name:@product.ProductName</b></li>
+        <li>Id:@product.Id</li>
+        <li>Quantity:@product.Quantity</li>
+        <br>
+    }
+</ul>
+
+<h3>TempData</h3>
+<ul>
+    @foreach (var product in TempData["products"] as List<AspNetCoreMvc.Models.Product>)
+    {
+        <li><b>Name:@product.ProductName</b></li>
+        <li>Id:@product.Id</li>
+        <li>Quantity:@product.Quantity</li>
+        <br>
+    }
+</ul>
+
+
+
+<br>
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<h4>Created by Erry Carlmicheal</h4>
